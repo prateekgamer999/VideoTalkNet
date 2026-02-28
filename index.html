@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VideoTalkNet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/peerjs@1.5.1/dist/peerjs.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Video<span>Talk</span>Net</h1>
+
+    <!-- LOGIN AREA -->
+    <div id="login-area">
+        <input type="text" id="myName" placeholder="Your Name">
+        <br>
+        <input type="text" id="myId" placeholder="Your 4-Digit ID">
+        <button onclick="generateId()" class="blue">Random</button>
+        <br>
+        <input type="text" id="callId" placeholder="Friend's ID">
+        <br>
+        <button onclick="startVideoCall()" class="green">Connect to Friend</button>
+        <br><br>
+        <button onclick="startBotChat()" class="purple">🤖 Talk to Bot</button>
+    </div>
+
+    <!-- VIDEO CALL AREA -->
+    <div id="call-area">
+        <div class="video-grid">
+            <div>
+                <video id="myVideo" autoplay muted></video>
+                <p>You</p>
+            </div>
+            <div>
+                <video id="friendVideo" autoplay></video>
+                <p>Friend</p>
+            </div>
+        </div>
+        <div class="controls">
+            <button onclick="toggleMute()" id="muteBtn" class="red">🔇</button>
+            <button onclick="toggleCamera()" id="cameraBtn" class="red">📷</button>
+            <button onclick="endCall()" class="red">📞</button>
+        </div>
+    </div>
+
+    <!-- BOT CHAT AREA -->
+    <div id="bot-area">
+        <h3>🤖 Chat with VideoBot</h3>
+        <div id="chat-box"></div>
+        <br>
+        <input type="text" id="chat-input" placeholder="Type a message...">
+        <button onclick="sendMessage()" class="green">Send</button>
+        <br><br>
+        <button onclick="exitBot()" class="red">Exit Bot</button>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/bot.js"></script>
+</body>
+</html>
