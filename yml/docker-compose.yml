@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+    networks:
+      - videotalk
+
+  bot:
+    image: node:alpine
+    command: node bot.js
+    networks:
+      - videotalk
+
+networks:
+  videotalk:
+    driver: bridge

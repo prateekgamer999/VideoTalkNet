@@ -1,0 +1,21 @@
+{
+  "name": "videotalknet",
+  "version": "1.0.0",
+  "description": "LAN Video Calling App",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server",
+    "build": "echo 'Building project'"
+  },
+  "keywords": [
+    "video",
+    "chat",
+    "webrtc",
+    "lan"
+  ],
+  "author": "Prateek",
+  "license": "MIT",
+  "dependencies": {
+    "peerjs": "^1.5.2"
+  }
+}

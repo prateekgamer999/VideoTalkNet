@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VideoTalkNet>
+    <app>
+        <name>VideoTalkNet</name>
+        <version>1.0.0</version>
+        <author>Prateek</author>
+    </app>
+    <server>
+        <type>PeerJS</type>
+        <port>5500</port>
+        <protocol>http</protocol>
+    </server>
+    <features>
+        <videoCall>true</videoCall>
+        <chatBot>true</videoCall>
+        <screenShare>false</screenShare>
+    </features>
+    <users>
+        <user id="1001" name="Prateek"/>
+        <user id="1002" name="Raj"/>
+    </users>
+</VideoTalkNet>
